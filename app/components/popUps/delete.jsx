@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteProduct } from '@/app/redux/products/productsThunks';
 
-export default function DeletePopUp ({ isOpen, onClose, productName,productDelete })  {
+export default function DeletePopUp ({ isOpen, onClose, productName, productDelete, onDeleted })  {
   if (!isOpen) return null;
   const dispatch = useDispatch();
 
@@ -34,9 +34,10 @@ export default function DeletePopUp ({ isOpen, onClose, productName,productDelet
               Cancel
             </button>
             <button
-              onClick={() => {
-                dispatch(deleteProduct(productDelete.id));
+              onClick={async () => {
+                await dispatch(deleteProduct(productDelete.id));
                 onClose();
+                if (onDeleted) onDeleted();
               }}
               className="px-6 py-2.5 rounded-xl bg-[#f43f5e] text-white font-semibold hover:bg-[#e11d48] transition-colors shadow-lg shadow-rose-100"
             >

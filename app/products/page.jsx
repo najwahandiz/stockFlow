@@ -1,6 +1,6 @@
 "use client";
-import DeletePopUp from "../components/popUps/delete"; 
-import UpdatePopUp from "../components/popUps/update";
+import DeletePopUp from ".././components/popUps/delete"; 
+import UpdatePopUp from ".././components/popUps/update";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -73,7 +73,7 @@ export default function ProductDashboard () {
   );
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="p-6 mx-0 bg-gray-50 min-h-screen">
       
       {/* Header Simple */}
       <div className="mb-8">

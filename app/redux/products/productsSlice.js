@@ -57,7 +57,8 @@ const productsSlice = createSlice({
       })
       .addCase(deleteProduct.fulfilled,(state, action) =>{
         state.loading = false;
-          state.products = state.products.filter(p => p.id !== action.payload);
+        state.products = state.products.filter(p => p.id !== action.payload);
+        state.selectedProduct === null;
       })
 
       //update product
@@ -71,11 +72,17 @@ const productsSlice = createSlice({
         if(index !== -1) {
           state.products[index] = action.payload;
         }
+
+        if (state.selectedProduct?.id === action.payload.id) {
+          state.selectedProduct = action.payload;
+        }
+
       })
       .addCase(UpdateProduct.rejected, (state,action) =>{
         state.loading = false ;
         state.error = action.payload;
       })
+
 
       //fetch product by id
       .addCase(fetchById.pending, (state) => {
@@ -84,6 +91,7 @@ const productsSlice = createSlice({
       .addCase(fetchById.fulfilled,(state, action)=>{
         state.loading = false;
         state.selectedProduct = action.payload;
+       
       })
       .addCase(fetchById.rejected,(state,action)=>{
         state.loading = false;

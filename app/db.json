@@ -13,16 +13,12 @@
       "createdAt": "2024-11-12"
     },
     {
-      "id": "3",
       "name": "Mechanical Keyboard Pro",
-      "category": "Accessories",
+      "category": "Electronics",
       "price": 899,
-      "quantity": 42,
-      "initial": "M",
-      "status": "disponible",
-      "stockLevel": "in_stock",
-      "statusColor": "bg-green-100 text-green-700",
-      "createdAt": "2024-11-15"
+      "quantity": "43",
+      "description": "this is TT",
+      "id": "3"
     },
     {
       "id": "4",
@@ -37,56 +33,52 @@
       "createdAt": "2024-11-18"
     },
     {
-      "id": "5",
-      "name": "External SSD 1TB",
-      "category": "Storage",
-      "price": 1299,
-      "quantity": 27,
-      "initial": "E",
-      "status": "disponible",
-      "stockLevel": "in_stock",
-      "statusColor": "bg-green-100 text-green-700",
-      "createdAt": "2024-11-20"
+      "id": "4",
+      "name": "27-inch 4K Monitor",
+      "category": "Displays",
+      "price": 3499,
+      "quantity": 0,
+      "initial": "M",
+      "status": "vendu",
+      "stockLevel": "out_of_stock",
+      "statusColor": "bg-red-100 text-red-700",
+      "createdAt": "2024-11-18"
     },
     {
-      "id": "6",
-      "name": "USB-C Hub 8-in-1",
-      "category": "Accessories",
-      "price": 499,
-      "quantity": 9,
-      "initial": "U",
-      "status": "disponible",
-      "stockLevel": "low_stock",
-      "statusColor": "bg-orange-100 text-orange-700",
-      "createdAt": "2024-11-22"
+      "id": "4",
+      "name": "27-inch 4K Monitor",
+      "category": "Displays",
+      "price": 3499,
+      "quantity": 0,
+      "initial": "M",
+      "status": "vendu",
+      "stockLevel": "out_of_stock",
+      "statusColor": "bg-red-100 text-red-700",
+      "createdAt": "2024-11-18"
     },
     {
-      "id": "7",
-      "name": "Gaming Headset X",
-      "category": "Audio",
-      "price": 1199,
-      "quantity": 31,
-      "initial": "G",
-      "status": "disponible",
-      "stockLevel": "in_stock",
-      "statusColor": "bg-green-100 text-green-700",
-      "createdAt": "2024-11-24"
+      "id": "4",
+      "name": "27-inch 4K Monitor",
+      "category": "Displays",
+      "price": 3499,
+      "quantity": 0,
+      "initial": "M",
+      "status": "vendu",
+      "stockLevel": "out_of_stock",
+      "statusColor": "bg-red-100 text-red-700",
+      "createdAt": "2024-11-18"
     },
     {
-      "name": "Wi-Fi 6 Router",
-      "category": "Audio",
-      "price": "1895",
-      "quantity": 14,
-      "description": "",
-      "id": "8"
-    },
-    {
-      "name": "router wifi",
-      "category": "Electronics",
-      "price": "1022",
-      "quantity": "19",
-      "description": "a wifi router ",
-      "id": "df49"
+      "id": "4",
+      "name": "27-inch 4K Monitor",
+      "category": "Displays",
+      "price": 3499,
+      "quantity": 0,
+      "initial": "M",
+      "status": "vendu",
+      "stockLevel": "out_of_stock",
+      "statusColor": "bg-red-100 text-red-700",
+      "createdAt": "2024-11-18"
     }
   ]
 }

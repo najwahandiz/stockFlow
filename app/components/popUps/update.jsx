@@ -102,7 +102,7 @@ if (!isOpen) return null;
               value={formData.category}
               onChange={handelChange}
               className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 outline-none transition-all text-slate-900 appearance-none"
-              required
+              
             >
               <option value="">Select a category</option>
               <option value="Electronics">Electronics</option>
@@ -134,7 +134,7 @@ if (!isOpen) return null;
                 value={formData.quantity}
                 onChange={handelChange}
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 outline-none transition-all"
-                required
+                
               />
             </div>
           </div>
