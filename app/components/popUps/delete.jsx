@@ -29,7 +29,7 @@ export default function DeletePopUp ({ isOpen, onClose, productName, productDele
           <div className="flex justify-end gap-3 mt-8">
             <button
               onClick={onClose}
-              className="px-6 py-2.5 rounded-xl border border-gray-100 bg-gray-50/50 text-[#0f172a] font-semibold hover:bg-gray-100 transition-colors"
+              className="px-6 py-2.5 rounded-xl border border-gray-100 bg-gray-50/50 text-[#0f172a] font-semibold hover:bg-gray-100 transition-colors cursor-pointer"
             >
               Cancel
             </button>
@@ -39,7 +39,7 @@ export default function DeletePopUp ({ isOpen, onClose, productName, productDele
                 onClose();
                 if (onDeleted) onDeleted();
               }}
-              className="px-6 py-2.5 rounded-xl bg-[#f43f5e] text-white font-semibold hover:bg-[#e11d48] transition-colors shadow-lg shadow-rose-100"
+              className="px-6 py-2.5 rounded-xl bg-[#f43f5e] text-white font-semibold hover:bg-[#e11d48] transition-colors shadow-lg shadow-rose-100 cursor-pointer"
             >
               Delete
             </button>

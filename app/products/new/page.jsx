@@ -27,6 +27,7 @@ const AddProductPage = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
+      status : "disponible",
       [name]: value,
     }));
   };

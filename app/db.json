@@ -1,84 +1,71 @@
 {
   "products": [
     {
-      "id": "2",
-      "name": "Wireless Mouse MX",
-      "category": "Accessories",
-      "price": 399,
-      "quantity": 6,
-      "initial": "W",
+      "name": "Laptop Pro 15",
+      "category": "Storage",
+      "price": 12999,
+      "status": "vendu",
+      "quantity": 18,
+      "description": "",
+      "id": "1"
+    },
+    {
+      "name": "efgege",
+      "category": "Networking",
+      "price": "88",
+      "quantity": "55",
+      "description": "g:gm",
+      "status": "vendu",
+      "id": "8427"
+    },
+    {
+      "name": "Najwa",
+      "category": "Storage",
+      "price": "5",
+      "quantity": "5",
+      "description": "",
       "status": "disponible",
-      "stockLevel": "low_stock",
-      "statusColor": "bg-orange-100 text-orange-700",
-      "createdAt": "2024-11-12"
+      "id": "9f58"
     },
     {
+      "id": "4701",
+      "name": "jii ko",
+      "category": "Smartphones",
+      "price": "8",
+      "quantity": "8",
+      "description": "",
+      "status": "disponible"
+    },
+    {
+      "id": "8889",
+      "name": "jii ko",
+      "category": "Smartphones",
+      "price": "8",
+      "quantity": "8",
+      "description": "",
+      "createdAt": "2024-11-15",
+      "status": "vendu"
+    },
+    {
+      "id": "98",
       "name": "Mechanical Keyboard Pro",
-      "category": "Electronics",
+      "category": "Networking",
       "price": 899,
-      "quantity": "43",
-      "description": "this is TT",
-      "id": "3"
+      "quantity": 42,
+      "initial": "M",
+      "status": "disponible",
+      "stockLevel": "in_stock",
+      "statusColor": "bg-green-100 text-green-700",
+      "createdAt": "2024-11-15"
     },
     {
-      "id": "4",
-      "name": "27-inch 4K Monitor",
-      "category": "Displays",
-      "price": 3499,
-      "quantity": 0,
-      "initial": "M",
-      "status": "vendu",
-      "stockLevel": "out_of_stock",
-      "statusColor": "bg-red-100 text-red-700",
-      "createdAt": "2024-11-18"
-    },
-    {
-      "id": "4",
-      "name": "27-inch 4K Monitor",
-      "category": "Displays",
-      "price": 3499,
-      "quantity": 0,
-      "initial": "M",
-      "status": "vendu",
-      "stockLevel": "out_of_stock",
-      "statusColor": "bg-red-100 text-red-700",
-      "createdAt": "2024-11-18"
-    },
-    {
-      "id": "4",
-      "name": "27-inch 4K Monitor",
-      "category": "Displays",
-      "price": 3499,
-      "quantity": 0,
-      "initial": "M",
-      "status": "vendu",
-      "stockLevel": "out_of_stock",
-      "statusColor": "bg-red-100 text-red-700",
-      "createdAt": "2024-11-18"
-    },
-    {
-      "id": "4",
-      "name": "27-inch 4K Monitor",
-      "category": "Displays",
-      "price": 3499,
-      "quantity": 0,
-      "initial": "M",
-      "status": "vendu",
-      "stockLevel": "out_of_stock",
-      "statusColor": "bg-red-100 text-red-700",
-      "createdAt": "2024-11-18"
-    },
-    {
-      "id": "4",
-      "name": "27-inch 4K Monitor",
-      "category": "Displays",
-      "price": 3499,
-      "quantity": 0,
-      "initial": "M",
-      "status": "vendu",
-      "stockLevel": "out_of_stock",
-      "statusColor": "bg-red-100 text-red-700",
-      "createdAt": "2024-11-18"
+      "id": "6ec8",
+      "name": "njhlh",
+      "category": "Networking",
+      "price": "44",
+      "quantity": "55",
+      "description": "jhl",
+      "status": "disponible"
     }
   ]
 }

@@ -1,34 +1,42 @@
 import React from 'react';
-import { TrendingUp, TrendingDown } from 'lucide-react';
 
-const StatCard = ({ title, value, trend, trendValue, icon: Icon, isDark = false }) => {
+export default function StatCard({ title, value, subtitle, icon, color }) {
+  // Configuration des couleurs utilisant des tons Slate pour la modernité
+  const colorConfig = {
+    blue: "text-blue-600 bg-blue-50/50 border-blue-100",
+    emerald: "text-teal-600 bg-emerald-50/50 border-emerald-100",
+    amber: "text-amber-600 bg-amber-50/50 border-amber-100",
+    purple: "text-purple-600 bg-purple-50/50 border-purple-100"
+  };
+
   return (
-    <div className={`p-6 rounded-[2rem] border shadow-sm flex flex-col justify-between h-full transition-all hover:shadow-md ${
-      isDark ? 'bg-[#2D3748] border-none text-white' : 'bg-white border-slate-100 text-slate-900'
-    }`}>
-      <div className="flex justify-between items-start">
-        <div>
-          <p className={`text-sm font-bold uppercase tracking-widest ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
-            {title}
-          </p>
-          <h3 className="text-3xl font-black mt-2 tracking-tight">{value}</h3>
+    <div className="group bg-gray-100 p-4  rounded-[2rem] border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-slate-200/50 hover:-translate-y-1">
+      <div className="flex items-start justify-between mb-6">
+        {/* Container Icône : Plus large avec des coins arrondis doux */}
+        <div className={`p-3.5 rounded-2xl border transition-colors duration-300 bg-white ${colorConfig[color]}`}>
+          {React.cloneElement(icon, { size: 22, strokeWidth: 2.5 })}
         </div>
-        <div className={`p-3 rounded-2xl ${isDark ? 'bg-white/10 text-white' : 'bg-teal-50 text-teal-600'}`}>
-          <Icon size={24} />
+        
+        {/* Titre : Très petit, noir profond et espacé (Style Dashboard Pro) */}
+        <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.15em] mt-1">
+          {title}
         </div>
       </div>
-      
-      <div className="mt-6 flex items-center gap-2">
-        <div className={`flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-lg ${
-          trend === 'up' ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-600'
-        }`}>
-          {trend === 'up' ? <TrendingUp size={14} /> : <TrendingDown size={14} />}
-          {trendValue}
+
+      <div>
+        {/* Valeur : Typographie "Black" ultra-lisible */}
+        <h3 className="text-2xl font-black text-slate-900 tracking-tight mb-1">
+          {value}
+        </h3>
+        
+        {/* Sous-titre : Avec un petit indicateur visuel */}
+        <div className="flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-teal-400 transition-colors"></span>
+          <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">
+            {subtitle}
+          </p>
         </div>
-        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">vs last month</span>
       </div>
     </div>
   );
-};
-
-export default StatCard;
+}

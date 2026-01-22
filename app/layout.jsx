@@ -12,7 +12,7 @@ import { Toaster } from 'react-hot-toast';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-gray-50 ">
+      <body className="min-h-screen bg-gray-50 mx-0">
         <ReduxProvider>
           <div className="flex">
             
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             </aside>
 
             {/* Main content */}
-            <main className="flex-1 flex justify-center px-2 sm:px-2">
+            <main className="flex-1 flex justify-center px-0 ">
               <div className="w-full max-w-7xl">
                 {children}
                 <Toaster position="top-right" reverseOrder={false} />

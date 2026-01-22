@@ -1,7 +1,8 @@
 "use client"
 
-import {React, useState, useEffect} from 'react'
+import {React, useState, useEffect, useMemo} from 'react'
 import { UpdateProduct } from '@/app/redux/products/productsThunks';
+import {toggleVendu} from '@/app/redux/products/productsSlice'
 import { useDispatch,useSelector } from 'react-redux';
 import { X } from 'lucide-react';
 
@@ -11,8 +12,13 @@ export default function UpdatePopUp({ productToUpdate, isOpen, onClose }) {
 if (!isOpen) return null;
 
   const dispatch = useDispatch ();
-  const {loading} = useSelector((state)=>(state.products));
+  const {loading, products} = useSelector((state)=>(state.products));
   
+  
+  const categories = useMemo(() => {
+      const uniqueCategories = products.map((p) => p.category);
+      return [...new Set(uniqueCategories)];
+  }, [products]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -20,6 +26,7 @@ if (!isOpen) return null;
     price: "",
     quantity: "",
     description: "",
+    status:"",
   });
 
   useEffect (()=>{
@@ -30,6 +37,7 @@ if (!isOpen) return null;
         price: productToUpdate.price,
         quantity: productToUpdate.quantity,
         description: productToUpdate.description || "",
+        status : productToUpdate.status,
       });
     };
 
@@ -40,6 +48,7 @@ if (!isOpen) return null;
     setFormData((prev)=>({...prev,[name]:value}));
 
   }; 
+
 
   const handelSubmit = async (e) => {
     e.preventDefault();
@@ -104,13 +113,14 @@ if (!isOpen) return null;
               className="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-teal-500 outline-none transition-all text-slate-900 appearance-none"
               
             >
-              <option value="">Select a category</option>
-              <option value="Electronics">Electronics</option>
-              <option value="Audio">Audio</option>
-              <option value="Sports">Sports</option>
-              <option value="Food & Beverage">Food & Beverage</option>
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
             </select>
           </div>
+                
 
           {/* Price & Quantity Grid */}
           <div className="grid grid-cols-2 gap-4">
@@ -157,13 +167,13 @@ if (!isOpen) return null;
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 font-semibold hover:bg-slate-50 transition-colors"
+              className="px-6 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 font-semibold hover:bg-gray-200 transition-colors cursor-pointer"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-6 py-2.5 rounded-xl bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-all shadow-lg shadow-teal-600/20 active:scale-[0.98]"
+              className="px-6 py-2.5 rounded-xl bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-all shadow-lg shadow-teal-600/20 active:scale-[0.98] cursor-pointer"
             >
               
               {loading ? "Updating..." : "Update Product"}

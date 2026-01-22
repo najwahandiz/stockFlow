@@ -50,7 +50,7 @@ export default function Détails() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center p-8 bg-white rounded-2xl shadow-sm border border-red-100">
-          <p className="text-red-500 font-bold text-lg">Error getting product...</p>
+          <p className="text-red-500 font-bold text-lg cursor-pointer">Error getting product...</p>
           <Link href="/products" className="mt-4 inline-block text-gray-500 hover:underline">Back to catalog</Link>
         </div>
       </div>
@@ -73,15 +73,15 @@ export default function Détails() {
         <div className="flex justify-between items-center mb-6">
           <Link
             href="/products"
-            className="flex items-center gap-2 text-gray-500 hover:text-teal-600 transition-colors font-medium group"
+            className="flex items-center gap-2 text-gray-500 hover:text-teal-600 transition-colors font-medium group cursor-pointer"
           >
-            <div className="p-2 bg-white rounded-lg shadow-sm group-hover:bg-teal-50">
+            <div className="p-2 bg-white rounded-lg shadow-sm group-hover:bg-teal-50 cursor-pointer">
               <ArrowLeft size={18} />
             </div>
             Back to products
           </Link>
           
-          <button className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-gray-700 hover:bg-gray-50 shadow-sm transition-all font-semibold text-sm"
+          <button className="flex items-center gap-2 bg-white border border-gray-200 px-4 py-2 rounded-xl text-gray-700 hover:bg-teal-50 shadow-sm transition-all font-semibold text-sm cursor-pointer"
                   onClick={()=>setShowUpdatePopup(true)}>
             <Edit3 size={16} /> Edit Product
           </button>
@@ -183,7 +183,7 @@ export default function Détails() {
                  <p className="text-lg font-bold">{(selectedProduct.price * selectedProduct.quantity).toLocaleString()} Dh</p>
                </div>
             </div>
-            <button className="bg-teal-500 hover:bg-teal-400 text-white px-6 py-2 rounded-xl font-bold transition-all shadow-lg shadow-teal-500/20 text-sm"
+            <button className="bg-teal-500 hover:bg-black-400 text-white px-6 py-2 rounded-xl font-bold transition-all shadow-lg shadow-teal-500/20 text-sm cursor-pointer"
              onClick={()=>setIsOpen(true)}>
               Remove from stock
             </button>
